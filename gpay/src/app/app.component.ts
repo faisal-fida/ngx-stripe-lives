@@ -43,20 +43,20 @@ export class AppComponent {
   onLoadPaymentData = (event: Event): void => {
     if ('detail' in event) {
       const customEvent = event as CustomEvent<google.payments.api.PaymentData>;
-      console.log('load payment data', customEvent.detail);
+      console.log('PaymentData Loaded', customEvent.detail);
     } else {
       console.error('Event does not contain detail property');
     }
   };
 
-  onError = (event: any): void => {
+  onError = (event: ErrorEvent): void => {
     console.error('error', event.error);
   };
 
   onPaymentDataAuthorized: google.payments.api.PaymentAuthorizedHandler = (
     paymentData
   ) => {
-    console.log('payment authorized', paymentData);
+    console.log('Pyament authorized', paymentData);
 
     return {
       transactionState: 'SUCCESS',

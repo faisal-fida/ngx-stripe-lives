@@ -5,16 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { GooglePayButtonModule } from '@google-pay/button-angular';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    GooglePayButtonModule,
-    FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, GooglePayButtonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
